@@ -1,7 +1,5 @@
-Overview
 This project is aimed at enhancing my skills in Android Development. It serves as a platform for me to learn and implement various concepts, techniques, and best practices in Android app development.
 
-Purpose
 The primary goal of this project is self-improvement and skill enhancement. By working on this project, I aim to:
 
 Deepen my understanding of Android development principles.
