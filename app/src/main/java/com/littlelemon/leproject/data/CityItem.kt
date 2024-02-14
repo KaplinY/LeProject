@@ -8,4 +8,4 @@ data class CityItem(
     @DrawableRes val image: Int
 )
 
-data class Cities(val items: List<CityItem>)
+

@@ -18,23 +18,34 @@ import com.littlelemon.leproject.data.Cities
 import com.littlelemon.leproject.data.CityItem
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Home
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CardElevation
 import androidx.compose.material3.ElevatedCard
+import androidx.compose.material3.Icon
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
+import androidx.navigation.NavController
 import com.littlelemon.leproject.compose.citycard.CityCard
+import com.littlelemon.leproject.data.City
+import com.littlelemon.leproject.viewmodels.CitiesViewModel
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun CitiesScreen(
+    citiesViewModel: CitiesViewModel,
     cities: Cities,
+    savedCities: List<City>,
     onNextButtonClicked: () -> Unit = {},
+    navController: NavController,
     modifier: Modifier = Modifier
 ){
     Column {
-        Button(onClick = onNextButtonClicked) {
-            Text(text = "Back")
+        OutlinedButton(onClick = onNextButtonClicked) {
+            Text(text = "Home")
+            Icon(imageVector = Icons.Filled.Home, contentDescription = null)
         }
         LazyVerticalGrid(
             columns = GridCells.Fixed(count = 2),
@@ -43,8 +54,8 @@ fun CitiesScreen(
             horizontalArrangement = Arrangement.spacedBy(8.dp),
             ){items(
                 items = cities.items,
-                itemContent = {cityItem: CityItem ->
-                    CityCard(cityItem)
+                itemContent = {city: City ->
+                    CityCard(citiesViewModel, city, savedCities, navController = navController)
                 }
             )
         }
