@@ -47,7 +47,7 @@ fun CitiesAppBar(
     navigateUp: () -> Unit
 ){
     TopAppBar(
-        title = { Text(text = "Hello") },
+        title = { Text(text = "Canadian Cities") },
         colors = TopAppBarDefaults.mediumTopAppBarColors(
             containerColor = MaterialTheme.colorScheme.primaryContainer
         ),
@@ -85,9 +85,6 @@ fun CitiesApp(
                     navController.navigate(Screen.Cities.route)
                 },
                     navController,
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .padding(16.dp)
                 )
             }
             composable(route = Screen.Cities.route){

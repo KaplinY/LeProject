@@ -5,6 +5,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
@@ -43,7 +44,10 @@ fun CitiesScreen(
     modifier: Modifier = Modifier
 ){
     Column {
-        OutlinedButton(onClick = onNextButtonClicked) {
+        OutlinedButton(
+            onClick = onNextButtonClicked,
+            modifier = Modifier.padding(8.dp)
+        ) {
             Text(text = "Home")
             Icon(imageVector = Icons.Filled.Home, contentDescription = null)
         }
