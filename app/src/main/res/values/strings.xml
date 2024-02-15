@@ -2,4 +2,69 @@
     <string name="app_name">LeProject</string>
     <string name="home">Home</string>
     <string name="cities">Cities</string>
+    <string name="add_city">Add New City</string>
+    <string name="no_saved">You have no saved cities currently</string>
+    <string name="all_cities">All Cities</string>
+
+    <!--City Descriptions-->
+    <string name="toronto_d">Toronto is the most populous city in Canada
+        and the capital city of the Canadian province of Ontario.
+        Toronto is an international centre of business, finance, arts, sports and culture,
+        and is one of the most multicultural and cosmopolitan cities in the world.</string>
+    <string name="ottawa_d">Ottawa is the capital city of Canada.
+     It is located in the southern portion of the province of Ontario,
+        at the confluence of the Ottawa River and the Rideau River.
+        As of 2021, Ottawa had a city population of 1,017,449 and a metropolitan population of 1,488,307,
+        making it the fourth-largest city and fourth-largest metropolitan area in Canada.
+    </string>
+    <string name="vancouver_d">Vancouver is a major city in western Canada,
+        located in the Lower Mainland region of British Columbia.
+        The Metro Vancouver area had a population of 2.6 million in 2021, making it the third-largest metropolitan area in Canada. Greater Vancouver,
+        along with the Fraser Valley, comprises the Lower Mainland with a regional population of over 3 million.
+        Vancouver has the highest population density in Canada, with over 5,700 people per square kilometre,
+        and fourth highest in North America (after New York City, San Francisco, and Mexico City).
+    </string>
+    <string name="calgary_d">Calgary is the largest city in the Canadian province of Alberta.
+        As of 2021, the city proper had a population of 1,306,784 and a metropolitan population of 1,481,806.
+        Calgary is situated at the confluence of the Bow River and the Elbow River in the southwest of the province,
+        in the transitional area between the Rocky Mountain Foothills and the Canadian Prairies.
+    </string>
+    <string name="winnipeg_d">Winnipeg is the capital and largest city of the province of Manitoba in Canada.
+        The city is named after the nearby Lake Winnipeg; the name comes from the Western Cree words for "muddy water" – winipīhk.
+        The region was a trading centre for Indigenous peoples long before the arrival of Europeans; it is the traditional territory of the Anishinabe (Ojibway),
+        Ininew (Cree), Oji-Cree, Dene, and Dakota, and is the birthplace of the Métis Nation.
+    </string>
+    <string name="quebec_d">Quebec City is the capital city of the Canadian province of Quebec. As of July 2021,
+        the city had a population of 549,459, and the metropolitan area had a population of 839,311.
+         It is also the second-largest city in the province, after Montreal.
+        It has a humid continental climate with warm summers coupled with cold and snowy winters.
+    </string>
+    <string name="montreal_d">Montreal is the second most populous city in Canada, the tenth most populous city in North America,
+        and the most populous city in the province of Quebec. Founded in 1642 as Ville-Marie, or "City of Mary", it is named after Mount Royal,
+        the triple-peaked hill around which the early city of Ville-Marie was built.</string>
+    <string name="hamilton_d">Hamilton is a port city in the Canadian province of Ontario.
+        Hamilton has a population of 569,353, and its census metropolitan area,
+        which encompasses Burlington and Grimsby, has a population of 785,184.
+        Traditionally, the local economy has been led by the steel and heavy manufacturing industries.
+        During the 2010s, a shift toward the service sector occurred, such as health and sciences.
+        Hamilton is home to the Royal Botanical Gardens, the Canadian Warplane Heritage Museum,
+        the Bruce Trail, McMaster University, Mohawk College, and Redeemer University.
+    </string>
+    <string name="edmonton_d">Edmonton is the capital city of the Canadian province of Alberta.
+        Edmonton is situated on the North Saskatchewan River and is the centre of the Edmonton Metropolitan Region,
+        which is surrounded by Alberta\'s central region.
+        The city anchors the northern end of what Statistics Canada defines as the "Calgary–Edmonton Corridor", a region spanning between Edmonton and the city of Calgary,
+        Alberta’s largest city, which includes the many smaller municipalities between the two.</string>
+    <string name="saskatoon_d">Saskatoon is the largest city in the Canadian province of Saskatchewan.
+        It straddles a bend in the South Saskatchewan River in the central region of the province.
+        It is located along the Trans-Canada Yellowhead Highway, and has served as
+        the cultural and economic hub of central Saskatchewan since its founding in 1882 as a Temperance colony.</string>
+    <string name="kitchener_d">Kitchener is a city in the Canadian province of Ontario,
+        about 100 km (62 mi) west of Toronto. It is one of three cities that make up the Regional Municipality of Waterloo and is the regional seat.
+        Kitchener was known as Berlin until a 1916 referendum changed its name. The city covers an area of 136.86 km2,
+        and had a population of 256,885 at the time of the 2021 Canadian census.</string>
+    <string name="halifax_d">Halifax is the capital and largest municipality of the Canadian province of Nova Scotia,
+        and the largest municipality in Atlantic Canada. As of 2022, it is estimated that the population of the Halifax CMA was 480,582,
+        with 348,634 people in its urban area. The regional municipality consists of four former municipalities that were amalgamated in 1996:
+        Halifax, Dartmouth, Bedford, and Halifax County.</string>
 </resources>

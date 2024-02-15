@@ -44,10 +44,8 @@ fun CityCard(
     cities: List<City>,
     navController: NavController,
     ){
-
     ElevatedCard (
-        elevation = CardDefaults.cardElevation(
-            defaultElevation = 6.dp),
+        elevation = CardDefaults.cardElevation(defaultElevation = 6.dp),
         modifier = Modifier
             .size(width = 180.dp, height = 150.dp),
     ) {

@@ -1,8 +1,12 @@
 package com.littlelemon.leproject.compose.home
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.grid.GridCells
@@ -15,9 +19,15 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.littlelemon.leproject.compose.citycard.CityCard
 import com.littlelemon.leproject.data.City
@@ -31,10 +41,9 @@ fun HomeScreen(
     cities: List<City>,
     onNextButtonClicked: () -> Unit = {},
     navController: NavController,
-    modifier: Modifier = Modifier
 ){
     if (cities.isEmpty()) {
-        EmptyHomeScreen(citiesViewModel, onNextButtonClicked)
+        EmptyHomeScreen(onNextButtonClicked)
     } else {
         SavedCitiesScreen(citiesViewModel, cities, onNextButtonClicked, navController)
     }
@@ -47,10 +56,14 @@ fun SavedCitiesScreen(
     onNextButtonClicked: () -> Unit = {},
     navController: NavController,
     ){
-
         Column {
-            OutlinedButton(onClick = onNextButtonClicked) {
-                Text(text = "To All Cities", modifier = Modifier.padding(end = 4.dp))
+            OutlinedButton(
+                onClick = onNextButtonClicked,
+                modifier = Modifier.padding(8.dp)
+            ) {
+                Text(
+                    text = stringResource(id = R.string.all_cities),
+                    modifier = Modifier.padding(end = 4.dp))
                 Icon(
                     painter = painterResource(id = R.drawable.cityscape),
                     contentDescription = null,
@@ -67,18 +80,38 @@ fun SavedCitiesScreen(
                 }
             }
         }
-}
+    }
 
 @Composable
 fun EmptyHomeScreen(
-    citiesViewModel: CitiesViewModel,
     onNextButtonClicked: () -> Unit = {},
     ){
+    Image(
+        painter = painterResource(id = R.drawable.background),
+        contentDescription = null,
+        contentScale = ContentScale.FillBounds,
+        modifier = Modifier.fillMaxSize(),
+        alpha = 0.15f
+    )
     Column() {
-        Text(text = "No saved cities")
-        OutlinedButton(onClick = onNextButtonClicked) {
-            Text(text = "Add new city")
+        OutlinedButton(
+            onClick = onNextButtonClicked,
+            modifier = Modifier.padding(8.dp)
+        ) {
+            Text(text = stringResource(id = R.string.add_city))
             Icon(imageVector = Icons.Filled.Add, contentDescription = null)
+        }
+        Row(
+            modifier = Modifier
+                .padding(top = 150.dp)
+                .fillMaxWidth(),
+            horizontalArrangement = Arrangement.Center
+        ) {
+            Text(
+                text = stringResource(id = R.string.no_saved),
+                fontSize = 20.sp,
+                fontWeight = FontWeight(600)
+            )
         }
     }
 }

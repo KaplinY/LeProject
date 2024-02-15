@@ -10,7 +10,8 @@ data class City(
     @PrimaryKey
     @ColumnInfo(name = "city") val city: String,
     @ColumnInfo(name = "province") val province: String,
-    @DrawableRes @ColumnInfo(name = "picture") val picture: Int
+    @DrawableRes @ColumnInfo(name = "picture") val picture: Int,
+    @ColumnInfo(name = "description") val description: Int,
 )
 
 data class Cities(val items: List<City>)
