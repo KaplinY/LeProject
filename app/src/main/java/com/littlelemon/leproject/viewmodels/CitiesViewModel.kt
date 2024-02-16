@@ -3,7 +3,6 @@ package com.littlelemon.leproject.viewmodels
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import com.littlelemon.leproject.data.City
-import com.littlelemon.leproject.data.CityItem
 import com.littlelemon.leproject.data.CityRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow

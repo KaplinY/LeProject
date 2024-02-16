@@ -67,11 +67,14 @@ fun CityCard(
             Row(
                 modifier = Modifier.padding(bottom = 5.dp)
             ) {
-
-                Text(text = city.city, fontWeight = FontWeight(600), fontSize = 14.sp)
-                Text(text = city.province, fontWeight = FontWeight(400), fontSize = 14.sp)
-
-                Spacer(modifier = Modifier.weight(1f))
+                Row(
+                    modifier = Modifier
+                        .width(140.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    AutoResizedText(text = city.city, fontWeight = FontWeight(600))
+                    AutoResizedText(text = city.province, fontWeight = FontWeight(400))
+                }
 
                 if (cities.contains(city)) {
                     IconButton(

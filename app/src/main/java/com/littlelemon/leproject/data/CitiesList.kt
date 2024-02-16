@@ -14,7 +14,7 @@ object CitiesList {
         City("Montreal ", "Quebec", R.drawable.montreal, R.string.montreal_d),
         City("Hamilton ", "Ontario", R.drawable.hamilton, R.string.hamilton_d),
         City("Edmonton ", "Alberta", R.drawable.edmonton, R.string.edmonton_d),
-        City("Saskatoon ", "SK", R.drawable.saskatoon, R.string.saskatoon_d),
+        City("Saskatoon ", "Saskatchewan", R.drawable.saskatoon, R.string.saskatoon_d),
         City("Kitchener ", "Ontario", R.drawable.kitchener, R.string.kitchener_d),
         City("Halifax ", "Nova Scotia", R.drawable.halifax, R.string.halifax_d),
     )
