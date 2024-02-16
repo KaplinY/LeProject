@@ -35,12 +35,6 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import com.littlelemon.leproject.data.City
 import com.littlelemon.leproject.viewmodels.CitiesViewModel
 
-sealed class Screen(val route: String) {
-    object Home: Screen(route = "home_screen")
-    object Cities: Screen(route = "cities_screen")
-    object City: Screen(route = "city_screen")
-}
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CitiesAppBar(
@@ -83,7 +77,7 @@ fun CitiesApp(
                     cities = savedCitiesList,
                     onNextButtonClicked = {
                     navController.navigate(Screen.Cities.route)
-                },
+                    },
                     navController,
                 )
             }
@@ -101,18 +95,10 @@ fun CitiesApp(
                         navController.navigate(Screen.Home.route)
                     },
                     navController,
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .padding(16.dp)
                 )
             }
-            composable(
-                route = Screen.City.route,
-
-                ){
-                    CityScreen(
-                        citiesViewModel = citiesViewModel,
-                        )
+            composable(route = Screen.City.route){
+                CityScreen(citiesViewModel = citiesViewModel)
             }
         }
     }
