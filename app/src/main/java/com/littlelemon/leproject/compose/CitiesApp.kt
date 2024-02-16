@@ -18,6 +18,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
@@ -34,6 +35,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 //import com.littlelemon.leproject.viewmodels.CitiesViewModel
 import com.littlelemon.leproject.data.City
 import com.littlelemon.leproject.viewmodels.CitiesViewModel
+import com.littlelemon.leproject.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -41,7 +43,7 @@ fun CitiesAppBar(
     navigateUp: () -> Unit
 ){
     TopAppBar(
-        title = { Text(text = "Canadian Cities") },
+        title = { Text(text = stringResource(id = R.string.canadian_cities)) },
         colors = TopAppBarDefaults.mediumTopAppBarColors(
             containerColor = MaterialTheme.colorScheme.primaryContainer
         ),

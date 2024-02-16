@@ -75,7 +75,6 @@ fun CityCard(
                     AutoResizedText(text = city.city, fontWeight = FontWeight(600))
                     AutoResizedText(text = city.province, fontWeight = FontWeight(400))
                 }
-
                 if (cities.contains(city)) {
                     IconButton(
                         onClick = { removeCityFromSaved(citiesViewModel, city) },
