@@ -24,6 +24,7 @@ fun AutoResizedText(
     var resizedTextStyle by remember {
         mutableStateOf(style)
     }
+
     var shouldDraw by remember {
         mutableStateOf(false)
     }
@@ -33,16 +34,16 @@ fun AutoResizedText(
         color = color,
         fontWeight = fontWeight,
         modifier = modifier.drawWithContent {
-            if (shouldDraw){
+            if (shouldDraw) {
                 drawContent()
             }
         },
         softWrap = false,
         style = resizedTextStyle,
-        onTextLayout = {result ->
-            if(result.didOverflowWidth){
+        onTextLayout = { result ->
+            if (result.didOverflowWidth) {
                 resizedTextStyle = resizedTextStyle.copy(
-                    fontSize = resizedTextStyle.fontSize*0.95
+                    fontSize = resizedTextStyle.fontSize * 0.95
                 )
             } else {
                 shouldDraw = true

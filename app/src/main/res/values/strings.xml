@@ -1,10 +1,11 @@
 <resources>
-    <string name="app_name">LeProject</string>
+    <string name="app_name">Canadian Cities</string>
     <string name="home">Home</string>
     <string name="cities">Cities</string>
     <string name="add_city">Add New City</string>
     <string name="no_saved">You have no saved cities currently</string>
     <string name="all_cities">All Cities</string>
+    <string name="canadian_cities">Canadian Cities</string>
 
     <!--City Descriptions-->
     <string name="toronto_d">Toronto is the most populous city in Canada

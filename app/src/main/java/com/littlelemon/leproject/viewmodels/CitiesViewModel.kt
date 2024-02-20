@@ -12,37 +12,36 @@ import kotlinx.coroutines.flow.update
 import javax.inject.Inject
 
 @HiltViewModel
-class CitiesViewModel @Inject constructor(val cityRepository: CityRepository):
-    ViewModel() {
+class CitiesViewModel @Inject constructor(
+    private val cityRepository: CityRepository
+) : ViewModel() {
 
     private val _uiState = MutableStateFlow(CityUiState())
     val uiState: StateFlow<CityUiState> = _uiState.asStateFlow()
 
     val cityList: LiveData<List<City>> = cityRepository.allCities
-    val foundCity: LiveData<City> = cityRepository.foundCity
 
-
-    fun getAllCities(){
+    fun getAllCities() {
         cityRepository.getAllCities()
     }
 
-    fun addCity(city: City){
+    fun addCity(city: City) {
         cityRepository.addCity(city)
         getAllCities()
     }
 
-    fun updateCityDetails(city: City){
+    fun updateCityDetails(city: City) {
         cityRepository.updateCityDetails(city)
         getAllCities()
     }
 
-    fun deleteCity(city: City){
+    fun deleteCity(city: City) {
         cityRepository.deleteCity(city)
         getAllCities()
     }
 
     fun updateCurrentCity(city: City) {
-        _uiState.update {currentState ->
+        _uiState.update { currentState ->
             currentState.copy(
                 currentCity = city
             )

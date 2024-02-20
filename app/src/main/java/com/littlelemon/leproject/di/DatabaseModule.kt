@@ -1,7 +1,6 @@
 package com.littlelemon.leproject.di
 
 import android.content.Context
-import androidx.room.Room
 import com.littlelemon.leproject.data.CityDao
 import com.littlelemon.leproject.data.CityRoomDatabase
 import dagger.Module
@@ -15,17 +14,13 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object DatabaseModule {
     @Provides
-    fun provideCityDao(appDatabase: CityRoomDatabase) : CityDao{
+    fun provideCityDao(appDatabase: CityRoomDatabase): CityDao {
         return appDatabase.cityDao()
     }
 
     @Provides
     @Singleton
-    fun provideAddDatabase(@ApplicationContext context: Context) : CityRoomDatabase {
-        return Room.databaseBuilder(
-            context.applicationContext,
-            CityRoomDatabase::class.java,
-            "appDB"
-        ).build()
+    fun provideAddDatabase(@ApplicationContext context: Context): CityRoomDatabase {
+        return CityRoomDatabase.getInstance(context)
     }
 }

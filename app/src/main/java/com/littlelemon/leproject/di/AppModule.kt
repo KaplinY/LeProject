@@ -14,7 +14,7 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun provideCityRepository(cityDao: CityDao) : CityRepository {
+    fun provideCityRepository(cityDao: CityDao): CityRepository {
         return CityRepository(cityDao)
     }
 }

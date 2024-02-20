@@ -14,21 +14,21 @@ abstract class CityRoomDatabase : RoomDatabase() {
         private var INSTANCE: CityRoomDatabase? = null
 
         fun getInstance(context: Context): CityRoomDatabase {
-           synchronized(this) {
-               var instance = INSTANCE
+            synchronized(this) {
+                var instance = INSTANCE
 
-               if (instance == null) {
-                   instance = Room.databaseBuilder(
-                       context.applicationContext,
-                       CityRoomDatabase::class.java,
-                       "city_database"
-                   ).fallbackToDestructiveMigration()
-                       .build()
+                if (instance == null) {
+                    instance = Room.databaseBuilder(
+                        context.applicationContext,
+                        CityRoomDatabase::class.java,
+                        "city_database"
+                    ).fallbackToDestructiveMigration()
+                        .build()
 
-                   INSTANCE = instance
-               }
-               return instance
-           }
+                    INSTANCE = instance
+                }
+                return instance
+            }
         }
     }
 }
