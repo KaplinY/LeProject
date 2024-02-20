@@ -33,6 +33,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 //import com.littlelemon.leproject.viewmodels.CitiesViewModel
 import com.littlelemon.leproject.R
+import com.littlelemon.leproject.compose.Screen
 import com.littlelemon.leproject.data.Cities
 import com.littlelemon.leproject.data.City
 import com.littlelemon.leproject.viewmodels.CitiesViewModel
@@ -58,7 +59,7 @@ fun CityCard(
                     .clickable {
                         citiesViewModel.updateCurrentCity(city)
                         navController.navigate(
-                            route = "city_screen"
+                            Screen.City.name
                         )
                     }
                     .height(120.dp)
@@ -77,7 +78,8 @@ fun CityCard(
                 }
                 if (cities.contains(city)) {
                     IconButton(
-                        onClick = { removeCityFromSaved(citiesViewModel, city) },
+                        onClick = { removeCityFromSaved(citiesViewModel, city)
+                            getAllCities(citiesViewModel)},
                         modifier = Modifier.background(color = Color.Transparent)
                     ) {
                         Image(
@@ -88,7 +90,9 @@ fun CityCard(
                     }
                 } else {
                     IconButton(
-                        onClick = { addCityToSaved(citiesViewModel, city) },
+                        onClick = { addCityToSaved(citiesViewModel, city)
+                                  getAllCities(citiesViewModel)
+                        },
                         modifier = Modifier.background(color = Color.Transparent)
                     ) {
                         Image(
@@ -108,11 +112,19 @@ fun addCityToSaved(
     city: City
 ){
     citiesViewModel.addCity(city)
+
 }
 fun removeCityFromSaved(
     citiesViewModel: CitiesViewModel,
     city: City
 ){
     citiesViewModel.deleteCity(city)
+
+}
+
+fun getAllCities(
+    citiesViewModel: CitiesViewModel
+){
+    citiesViewModel.getAllCities()
 }
 

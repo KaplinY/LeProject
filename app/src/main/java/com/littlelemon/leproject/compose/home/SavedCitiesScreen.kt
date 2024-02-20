@@ -28,7 +28,7 @@ fun SavedCitiesScreen(
     cities: List<City>,
     onNextButtonClicked: () -> Unit = {},
     navController: NavController,
-){
+) {
     Column {
         OutlinedButton(
             onClick = onNextButtonClicked,
@@ -36,11 +36,13 @@ fun SavedCitiesScreen(
         ) {
             Text(
                 text = stringResource(id = R.string.all_cities),
-                modifier = Modifier.padding(end = 4.dp))
+                modifier = Modifier.padding(end = 4.dp)
+            )
             Icon(
                 painter = painterResource(id = R.drawable.cityscape),
                 contentDescription = null,
-                modifier = Modifier.size(30.dp))
+                modifier = Modifier.size(30.dp)
+            )
         }
         LazyVerticalGrid(
             columns = GridCells.Fixed(count = 2),
@@ -48,7 +50,7 @@ fun SavedCitiesScreen(
             verticalArrangement = Arrangement.spacedBy(8.dp),
             horizontalArrangement = Arrangement.spacedBy(8.dp),
         ) {
-            items( items = cities) { city ->
+            items(items = cities) { city ->
                 CityCard(citiesViewModel, city, cities, navController = navController)
             }
         }

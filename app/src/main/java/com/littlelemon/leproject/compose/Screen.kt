@@ -1,7 +1,7 @@
 package com.littlelemon.leproject.compose
 
-sealed class Screen(val route: String) {
-    object Home: Screen(route = "home_screen")
-    object Cities: Screen(route = "cities_screen")
-    object City: Screen(route = "city_screen")
+enum class Screen(val route: String) {
+    Home(route = "home_screen"),
+    Cities(route = "cities_screen"),
+    City(route = "city_screen")
 }

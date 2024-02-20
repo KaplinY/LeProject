@@ -1,6 +1,5 @@
 package com.littlelemon.leproject.data
 
-import androidx.core.provider.FontsContractCompat.FontRequestCallback.FontRequestFailReason
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert

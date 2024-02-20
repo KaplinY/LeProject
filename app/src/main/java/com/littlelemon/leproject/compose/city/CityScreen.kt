@@ -16,21 +16,20 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.littlelemon.leproject.data.City
 import com.littlelemon.leproject.viewmodels.CitiesViewModel
 
 @Composable
-fun CityScreen(citiesViewModel: CitiesViewModel){
+fun CityScreen(citiesViewModel: CitiesViewModel) {
     CityDetails(citiesViewModel)
 }
 
 @Composable
-fun CityDetails(citiesViewModel: CitiesViewModel){
+fun CityDetails(citiesViewModel: CitiesViewModel) {
 
     val cityUiState by citiesViewModel.uiState.collectAsState()
     val city = cityUiState.currentCity
 
-    Column (){
+    Column {
         Text(
             text = city.city,
             fontSize = 20.sp,
@@ -52,11 +51,13 @@ fun CityDetails(citiesViewModel: CitiesViewModel){
             modifier = Modifier
                 .padding(8.dp)
                 .width(370.dp)
-                .height(250.dp))
+                .height(250.dp)
+        )
         Text(
             text = stringResource(id = city.description),
             fontSize = 14.sp,
             textAlign = TextAlign.Left,
-            modifier = Modifier.padding(8.dp))
+            modifier = Modifier.padding(8.dp)
+        )
     }
 }

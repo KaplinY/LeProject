@@ -1,11 +1,10 @@
 package com.littlelemon.leproject.data
 
-import androidx.compose.ui.res.stringResource
 import com.littlelemon.leproject.R
 
 object CitiesList {
     val citiesList = mutableListOf(
-        City("Toronto ","Ontario", R.drawable.toronto, R.string.toronto_d),
+        City("Toronto ", "Ontario", R.drawable.toronto, R.string.toronto_d),
         City("Ottawa ", "Ontario", R.drawable.ottawa, R.string.ottawa_d),
         City("Vancouver ", "BC", R.drawable.vancouver, R.string.vancouver_d),
         City("Calgary ", "Alberta", R.drawable.calgary, R.string.calgary_d),

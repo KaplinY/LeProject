@@ -25,7 +25,7 @@ import com.littlelemon.leproject.R
 @Composable
 fun EmptyHomeScreen(
     onNextButtonClicked: () -> Unit = {},
-){
+) {
     Image(
         painter = painterResource(id = R.drawable.background),
         contentDescription = null,
@@ -33,7 +33,7 @@ fun EmptyHomeScreen(
         modifier = Modifier.fillMaxSize(),
         alpha = 0.15f
     )
-    Column() {
+    Column {
         OutlinedButton(
             onClick = onNextButtonClicked,
             modifier = Modifier.padding(8.dp)
