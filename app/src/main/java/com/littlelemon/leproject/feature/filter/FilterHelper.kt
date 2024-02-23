@@ -9,7 +9,7 @@ class FilterHelper {
             FilterType.All -> citiesList
             FilterType.Ontario -> citiesList.filter { city: City -> city.province == "Ontario" }
             FilterType.Quebec -> citiesList.filter { city: City -> city.province == "Quebec" }
-            FilterType.BC -> citiesList.filter { city: City -> city.province == "BC" }
+            FilterType.BC -> citiesList.filter { city: City -> city.province == "British Columbia" }
             FilterType.Alberta -> citiesList.filter { city: City -> city.province == "Alberta" }
         }
     }
