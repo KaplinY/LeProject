@@ -55,7 +55,7 @@ fun CityDetails(citiesViewModel: CitiesViewModel) {
         )
         Text(
             text = stringResource(id = city.description),
-            fontSize = 14.sp,
+            fontSize = 16.sp,
             textAlign = TextAlign.Left,
             modifier = Modifier.padding(8.dp)
         )

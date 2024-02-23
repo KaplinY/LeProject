@@ -21,12 +21,6 @@ class CityRepository @Inject constructor(
         }
     }
 
-    fun updateCityDetails(newCity: City) {
-        coroutineScope.launch(Dispatchers.IO) {
-            cityDao.updateCityDetails(newCity)
-        }
-    }
-
     fun getAllCities() {
         coroutineScope.launch(Dispatchers.IO) {
             allCities.postValue(cityDao.getAllCities())

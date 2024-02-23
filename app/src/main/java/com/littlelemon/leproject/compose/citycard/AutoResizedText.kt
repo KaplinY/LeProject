@@ -16,7 +16,7 @@ import androidx.compose.ui.text.font.FontWeight
 @Composable
 fun AutoResizedText(
     text: String,
-    style: TextStyle = MaterialTheme.typography.bodyMedium,
+    style: TextStyle = MaterialTheme.typography.bodyLarge,
     modifier: Modifier = Modifier,
     color: Color = style.color,
     fontWeight: FontWeight,
